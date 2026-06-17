@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Store</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    } 
+
+    body{
+      background:#cfcfb6;
+      color:#000000;
+    }
+
+    /* Navbar */
+    nav{
+      background:#000000;
+      color:white;
+      display:flex;
+      justify-content:space-between; 
+      align-items:center;
+      padding:15px 50px;
+    }
+
+    nav h1{
+      font-size:28px;
+      color:#ffb703;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:25px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#ffb703;
+    }
+
+    /* Hero Section */
+    .hero{
+      height:90vh;
+      background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url('https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1200&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero-content h2{
+      font-size:55px;
+      margin-bottom:15px;
+    }
+
+    .hero-content p{
+      font-size:20px;
+      margin-bottom:25px;
+    }
+
+    .btn{
+      padding:12px 25px;
+      background:#ffb703;
+      color:black;
+      text-decoration:none;
+      border-radius:5px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:white;
+    }
+
+    /* Books Section */
+    .books{
+      padding:60px 40px;
+      text-align:center;
+    }
+
+    .books h2{
+      margin-bottom:40px;
+      font-size:38px;
+    }
+
+    .book-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .book-card{
+      background:white;
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .book-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .book-card img{
+      width:100%;
+      height:300px;
+      object-fit:cover;
+    }
+
+    .book-card h3{
+      margin:15px 0 10px;
+    }
+
+    .book-card p{
+      padding:0 15px 15px;
+      font-size:14px;
+      color:#666;
+    }
+
+    .price{
+      color:#e63946;
+      font-size:20px;
+      font-weight:bold;
+      margin-bottom:15px;
+      display:block;
+    }
+
+    /* Footer */
+    footer{
+      background:#000000;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>Book Haven</h1>
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Books</a></li>
+      <li><a href="#">Categories</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav> 
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Welcome to Book Haven</h2>
+      <p>Discover your next favorite book today.</p>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Books Section -->
+  <section class="books">
+    <h2>Popular Books</h2>
+
+    <div class="book-container">
+
+      <div class="book-card">
+        <img src="https://m.media-amazon.com/images/I/71WMt8Wif0L._AC_UF1000,1000_QL80_.jpg" alt="Book">
+        <h3>Atomic Habits</h3>
+        <p>Build good habits and break bad ones with practical strategies.</p>
+        <span class="price">₹599</span>
+      </div>
+
+      <div class="book-card">
+        <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=600&auto=format&fit=crop" alt="Book">
+        <h3>Learning Web Design</h3>
+        <p>Perfect guide for beginners to master web development.</p>
+        <span class="price">₹699</span>
+      </div>
+
+      <div class="book-card">
+        <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=600&auto=format&fit=crop" alt="Book">
+        <h3>Success Mindset</h3>
+        <p>Improve productivity and build a winning mindset.</p>
+        <span class="price">₹399</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Book Haven | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
